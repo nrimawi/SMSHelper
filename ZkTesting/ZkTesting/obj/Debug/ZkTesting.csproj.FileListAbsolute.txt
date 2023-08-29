@@ -1,0 +1,12 @@
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.csproj.AssemblyReference.cache
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.csproj.SuggestedBindingRedirects.cache
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.Form1.resources
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.Properties.Resources.resources
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.csproj.GenerateResource.cache
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.csproj.CoreCompileInputs.cache
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\bin\Debug\ZkTesting.exe.config
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\bin\Debug\ZkTesting.exe
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\bin\Debug\ZkTesting.pdb
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.csproj.CopyComplete
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.exe
+C:\Users\ntaha\source\repos\ZkTesting\ZkTesting\obj\Debug\ZkTesting.pdb
