@@ -9,6 +9,7 @@ namespace SMSHelper.Helper
     internal interface IHTDHelper
     {
         Task<List<string>> Send(string phoneNumber, string txt);
+        Task<string?> GetCredit();
     }
     
 }

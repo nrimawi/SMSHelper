@@ -1,4 +1,5 @@
-﻿using Amazon.Runtime.Internal;
+﻿using Amazon.Runtime;
+using Amazon.Runtime.Internal;
 using Microsoft.Extensions.Configuration;
 using SMSHelper.Common;
 using System.Collections.Generic;
@@ -24,7 +25,37 @@ namespace SMSHelper.Helper.Implementation
         }
 
 
-        public async Task<List<string>> Send(string phoneNumber, string txt)
+        public async Task<string?> GetCredit()
+        {
+            List<string> successPhones = new();
+            HTDParams htdParams = _configuration.GetSection("HTDParams").Get<HTDParams>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                string url = htdParams.CreditURL!;
+
+
+                // Send the POST request
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                // Check if the response was successful
+                if (response.IsSuccessStatusCode)
+                {
+                    var  responseContent = await response.Content.ReadAsStringAsync();
+
+                   return  responseContent;
+
+
+
+                }
+                return null;
+
+            }
+
+
+        }
+
+        public async Task<List<string>> Send(string phoneNumbers, string txt)
         {
             List<string> successPhones = new();
             HTDParams htdParams = _configuration.GetSection("HTDParams").Get<HTDParams>();
@@ -38,7 +69,7 @@ namespace SMSHelper.Helper.Implementation
                 {
                     { "id", htdParams.Id!},
                     { "sender", htdParams.Sender! },
-                    { "to", phoneNumber },
+                    { "to", phoneNumbers },
                     { "msg", txt },
                     { "mode", "1" }
                 };
@@ -62,7 +93,7 @@ namespace SMSHelper.Helper.Implementation
                         string[] tokens2 = token.Split(':');
                         if (tokens2[1] != "INVALID")
                         {
-                            successPhones.Add(tokens2[0]);
+                            successPhones.Add(tokens2[0].Substring(2));
                         }
 
                     }

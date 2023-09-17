@@ -28,6 +28,7 @@ namespace SMSHelper.Common.DataModels
         public int AccessDoor { get; set; }
         [Required]
         public int Active { get; set; }
+        public string CreatedDate { get; set; }
 
         public override string ToString() { return $"User id={this.UserId}, Name={this.Name}, FingerprintId= {this.FingerprintId}, AccessDoor= {this.AccessDoor}, EndDate= {this.EndDate} "; }
 
